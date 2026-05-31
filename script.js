@@ -153,7 +153,7 @@ async function validateLoginFromSupabase(username, password) {
         console.log('Validando login para:', username);
 
         if (!supabaseClient) {
-            const users = JSON.parse(localStorage.getItem('portalUsers') || '[]');
+            const users = JSON.parse(localStorage.getItem('portalUsers1') || '[]');
             const user = users.find(u => u.username === username);
             
             if (!user) return null;
@@ -399,7 +399,7 @@ function startAutoSync() {
     // Cambia a 10000 si prefieres cada 10 segundos
     syncInterval = setInterval(() => {
         autoSyncButtons();
-    }, 5000);  // 5 segundos
+    }, 10000);  // 5 segundos
 }
 
 // NUEVA FUNCIÓN: Detener sincronización automática
@@ -414,7 +414,7 @@ function stopAutoSync() {
 async function saveButtonToSupabase(button) {
     try {
         if (!supabaseClient) {
-            const saved = localStorage.getItem('portalButtons') || '[]';
+            const saved = localStorage.getItem('portalButtons1') || '[]';
             const buttons = JSON.parse(saved);
             buttons.push(button);
             localStorage.setItem('portalButtons', JSON.stringify(buttons));
