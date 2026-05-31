@@ -1,6 +1,6 @@
 // ========== CONFIGURACIÓN SUPABASE ==========
-const SUPABASE_URL = 'https://hxdexehhsrrwjnjmhbxa.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_Ai_NyPeY_s04W25RUfq26w_BHCqHtGJ';
+const SUPABASE_URL = 'https://winmjanfdnzojywhqiwr.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_YfoksO6AbPd5fY4enQmo7g_9Z-Awfhl';
 
 let supabaseClient = null;
 let syncInterval = null;  // Para controlar el intervalo de sincronización
